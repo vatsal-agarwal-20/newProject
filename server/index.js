@@ -8,6 +8,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import {register} from "./controllers/auth.js"
 
 
 /* CONFIGURATIONS */
@@ -40,6 +41,14 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+
+/* ROUTES WITH FILES*/
+
+app.post("/auth/register", upload.single("picture"),register);
+//upload part:- middleware
+//register:- controller (or the logic of the endpoint)
+
+
 // Now we go to MongoDB
 // and setup the .env file
 

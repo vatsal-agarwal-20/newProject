@@ -35,3 +35,11 @@ Look at the structure of the database we need to use
 and then create all the relations between different types of data
 Data Model:- data diagram.png
 
+Handling Authentication and Authorization
+Starting with Auth Register
+(under File Storage part)
+
+Creating auth.js file in new "controllers" folder
+Then creating user schema in User.js in new "models" folder
+
+
