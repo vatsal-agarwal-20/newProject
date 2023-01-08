@@ -9,6 +9,7 @@ import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import {register} from "./controllers/auth.js"
+import authRoutes from "./routes/auth.js"
 
 
 /* CONFIGURATIONS */
@@ -44,10 +45,18 @@ const upload = multer({ storage });
 
 /* ROUTES WITH FILES*/
 
-app.post("/auth/register", upload.single("picture"),register);
 //upload part:- middleware
 //register:- controller (or the logic of the endpoint)
+app.post("/auth/register", upload.single("picture"),register);
 
+
+/* ROUTES */
+
+// here we have defined the default router path as "/auth" 
+// "in the auth.js" file in the routes folder
+// this means that the path will be pre-fixed to "/login" by default
+// when an "/auth" extension is present in the path
+app.use("/auth",authRoutes);
 
 // Now we go to MongoDB
 // and setup the .env file

@@ -36,10 +36,20 @@ and then create all the relations between different types of data
 Data Model:- data diagram.png
 
 Handling Authentication and Authorization
-Starting with Auth Register
+
+---> Starting with Auth Register
 (under File Storage part)
 
 Creating auth.js file in new "controllers" folder
 Then creating user schema in User.js in new "models" folder
+
+---> Now we start with the LOGIN information process
+
+Creating "auth.js" file in new "routes" folder
+
+Normally the "Register User" part would also come in the routes folder but
+here we are uploading a photo while registering and we have an 
+"upload" variable in the index.js file, therefore we define the register user part
+in the index.js file.
 
 
