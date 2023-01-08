@@ -37,6 +37,8 @@ Data Model:- data diagram.png
 
 Handling Authentication and Authorization
 
+1. Authentication
+
 ---> Starting with Auth Register
 (under File Storage part)
 
@@ -52,4 +54,12 @@ here we are uploading a photo while registering and we have an
 "upload" variable in the index.js file, therefore we define the register user part
 in the index.js file.
 
+Authentication is complete.
+Now, we move on to Authorization i.e. to control who can use the further
+endpoints of the application i.e. a registered and logged in user can use the 
+other properties of the application whereas a non-registered or non-logged in user
+cannot use the application further before completing the primary processes such as 
+registering and logging in.
 
+
+ 
