@@ -8,9 +8,12 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import {register} from "./controllers/auth.js"
+import { register } from "./controllers/auth.js"
 import authRoutes from "./routes/auth.js"
 import userRoutes from "./routes/users.js"
+import postRoutes from "./routes/posts.js"
+import { verifyToken } from './middleware/auth.js';
+import { createPost } from "./controllers/posts.js"
 
 /* CONFIGURATIONS */
 
@@ -50,8 +53,9 @@ const upload = multer({ storage });
 // we do not need to do it in this endpoint because
 // the user is yet to be registered therefore there is no need for authorization
 //register:- controller (or the logic of the endpoint)
-app.post("/auth/register", upload.single("picture"),register);
+app.post("/auth/register", upload.single("picture"), register);
 
+app.post("/posts", verifyToken, upload.single("picture"), createPost);
 
 /* ROUTES */
 
@@ -59,9 +63,10 @@ app.post("/auth/register", upload.single("picture"),register);
 // "in the auth.js" file in the routes folder
 // this means that the path will be pre-fixed to "/login" by default
 // when an "/auth" extension is present in the path
-app.use("/auth",authRoutes);
+app.use("/auth", authRoutes);
 
-app.use("/users",userRoutes);
+app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
 
 
 /*-------------------------------------------------------------------------------*/

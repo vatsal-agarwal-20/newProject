@@ -115,4 +115,30 @@ i.e from the user's list and from the friend's list.
 
 Now, we will define the POST routes
 
+Firstly we define the post route in the index.js file and also 
+another routes with file in the index.js where we can upload a picture
+
+create a posts.js file in the routes folder where the API calls will be defined
+
+and in the controllers folder, the posts.js file will handle
+the information needed for the API calls just like we did in the users scenario
+
+Now we will create a model for Post in the models folder which will be 
+imported in the posts.js file inside the controllers folder
+
+in the posts.js file in the controllers folder we 
+perform the CRUD operations where we use get and post calls
+to fetch and post the posts and the findByIdandUpdate call to 
+like and dislike the post.
+
+With this our backend part is complete
+
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+
+
 
