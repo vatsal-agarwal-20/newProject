@@ -5,7 +5,7 @@ npm i -g nodemon
 npm init -y
 
 npm i express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose
-
+ 
 express :-backend environment
 body-parser :- to parse body requests
 bcrypt :- for password encryption
@@ -62,4 +62,57 @@ cannot use the application further before completing the primary processes such 
 registering and logging in.
 
 
- 
+2. Authorization
+
+---> creating a new folder middleware 
+inside the middleware folder we define a file "auth.js"
+
+the authorization part is created and we can use the verifyToken
+in the middleware part of API calls where the authorization part is necessary
+
+
+---------------------------------------
+
+Now we will setup the user routes
+
+We have 3 kinds of user routes to be defined
+
+-> Current User information (on the left)
+or any other user information through user id
+
+-> User Friends list
+
+-> Updating friends list when add friend button is clicked
+
+Define the userRoutes in the index.js file then
+Create a new file "users.js" in the routes folder
+where the CRUD API calls will be defined
+
+and the logic of these calls will be defined 
+in the controllers folders in a new file 
+named "users.js".
+
+In the user.js file inside the controllers folder
+--- Define getUser
+
+--- Define getUserFriends
+-> In this we use Promise.all() for const friends because 
+here we will make multiple API calls for friends
+
+Also after mapping the friends, we will format the friends 
+according to the way we want it to be displayed
+in the frontend and so, we will also make some changes
+in our User schema.
+
+--- Define addRemoveFriend
+Here we will update the friends list
+
+If the friends already exists then we will remove it and 
+if it does not exist we will add it from both endpoints 
+i.e from the user's list and from the friend's list.
+
+---------------------------------------------------------------------------
+
+Now, we will define the POST routes
+
+

@@ -10,7 +10,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import {register} from "./controllers/auth.js"
 import authRoutes from "./routes/auth.js"
-
+import userRoutes from "./routes/users.js"
 
 /* CONFIGURATIONS */
 
@@ -46,6 +46,9 @@ const upload = multer({ storage });
 /* ROUTES WITH FILES*/
 
 //upload part:- middleware
+// here we can add verifyToken from the "middleware/auth.js" file in the middleware part but
+// we do not need to do it in this endpoint because
+// the user is yet to be registered therefore there is no need for authorization
 //register:- controller (or the logic of the endpoint)
 app.post("/auth/register", upload.single("picture"),register);
 
@@ -58,9 +61,12 @@ app.post("/auth/register", upload.single("picture"),register);
 // when an "/auth" extension is present in the path
 app.use("/auth",authRoutes);
 
+app.use("/users",userRoutes);
+
+
+/*-------------------------------------------------------------------------------*/
 // Now we go to MongoDB
 // and setup the .env file
-
 
 /* MONGOOSE SETUP */
 
