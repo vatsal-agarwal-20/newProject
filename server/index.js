@@ -14,6 +14,9 @@ import userRoutes from "./routes/users.js"
 import postRoutes from "./routes/posts.js"
 import { verifyToken } from './middleware/auth.js';
 import { createPost } from "./controllers/posts.js"
+import User from './models/User.js';
+import Post from './models/Post.js';
+import { users, posts } from "./data/index.js"
 
 /* CONFIGURATIONS */
 
@@ -82,6 +85,16 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
 }).then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+    /* ADD THIS DATA ONLY ONE TIME */
+    // So we will just save this once and then comment 
+    // out these two statements else the data will be 
+    // copied another time 
+
+    //By this method we have manually added data to our mongoose model
+
+    // User.insertMany(users);
+    // Post.insertMany(posts);
 })
     .catch((err) => console.log(`${err} did not connect`));
 

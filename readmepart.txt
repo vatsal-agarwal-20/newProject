@@ -133,6 +133,24 @@ like and dislike the post.
 
 With this our backend part is complete
 
+Add the dummy data in the index.js file in the data folder
+
+Now, we will be updating the main index.js accordingly to use the
+dummy data in our application.
+The updation will be done inside the app.listen part when the
+application runs successfully i.e. where the server port is defined
+
+/* ADD THIS DATA ONLY ONE TIME */
+    // So we will just save this once and then comment 
+    // out these two statements else the data will be 
+    // copied another time 
+
+    //By this method we have manually added data to our mongoose model
+
+    // User.insertMany(users);
+    // Post.insertMany(posts);
+
+
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
