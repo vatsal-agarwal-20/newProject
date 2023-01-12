@@ -225,6 +225,36 @@ HomePage is created thus the path is reduced to
 
 ----------------------------------------------------------------------------------------
 
+The index.js file in the state folder contains all the Redux 
+logic for the application
 
+With this the logical part of Redux is completed
 
+Now we will import the required modules in 
+the main index.js file.
+
+import authReducer from "./state"
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER
+} from "redux-persist";
+
+import storage from 'redux-persist/lib/storage';
+import { PersistGate } from 'redux-persist/integration/react';
+
+some imports are important just because we are using redux-persistent
+and the reason for using redux-persistent
+is that it stores the state value locally even after
+we exit the application.
+
+further in the file, we have defined
+Persist state with Redux Persist using Redux Toolkit 
 
