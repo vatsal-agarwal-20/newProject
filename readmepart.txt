@@ -161,5 +161,43 @@ application runs successfully i.e. where the server port is defined
 FRONTEND
 -----------
 
+Installing the required packages
+
+--> npm i react-redux @reduxjs/toolkit redux-persist react-dropzone dotenv formik yup react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material
+
+redux --> state management across the application
+
+redux-persist --> helps to store the states in localStorage
+which means that if the user closes the tab and visits the website again
+his/her information will be stored.
+
+dropzone --> to share images from frontend to the backend
+
+dotenv --> for environment variables
+
+formik --> for forms
+
+yup --> validation
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+copying linkedin and twitter png files from backend assets 
+to the frontend assets
+
+----------------------------------------------------------------------------------
+
+importing font style and then creating a new file called
+
+jsconfig.json which is defined as:-
+
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    },
+    "include": ["src"]
+}
+
+----------------------------------------------------------------------------------
+
+
 
 
