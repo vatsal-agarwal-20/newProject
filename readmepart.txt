@@ -198,6 +198,33 @@ jsconfig.json which is defined as:-
 
 ----------------------------------------------------------------------------------
 
+REDUX file structure
+-----------------------
+
+We will first create a new folder "scenes" in the src folder
+which will contain all the scenes and widgets of our project
+
+The new folder named "state" will contain our redux file structure
+
+inside each folder of the scene folder,
+we will define an index.jsx file.
+
+--------------------------------------------------------------------------------------
+---------------------------
+Fun fact using jsconfig.js
+---------------------------
+import HomePage from 'scenes/homePage';
+
+this is an import statement to import HomePage from 
+the index.jsx file in the homePage folder.
+
+Because of the jsconfig.js file we don't need to add the relative
+path to import components from other modules as here a reference of the 
+HomePage is created thus the path is reduced to
+'scenes/homePage'.
+
+----------------------------------------------------------------------------------------
+
 
 
 
