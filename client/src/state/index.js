@@ -44,8 +44,8 @@ export const authSlice = createSlice({
 
             state.posts=updatedPosts;
         },
-    }
-})
+    },
+});
 
 export const {setMode, setLogin, setFriends,
      setLogout, setPost, setPosts} = authSlice.actions;

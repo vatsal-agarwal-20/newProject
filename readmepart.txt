@@ -282,5 +282,23 @@ the end adding CssBaseline which is basically
 a reset kind of thing for the MUI CSS.
 
 
+-------------------------------------------------------
 
+We will now set up our Navbar
+
+We have defined a FlexBetween.js file in the components
+folder whereas we set some display flex properties which
+we can use whenever we want in our components.
+
+For the Navbar component we use the FlexBetween components
+2 times because
+
+1st one we will setup the FlexBetween for the whole Navbar component
+
+and the 2nd one is for FlexBetween inside the Navbar component
+i.e. the navbar is itself divided into two components and they are
+the LEFT component and the RIGHT component.
+
+Navbar part is done (throwing error at the moment)
+Cannot read firstName of user.
 
