@@ -5,7 +5,7 @@ npm i -g nodemon
 npm init -y
 
 npm i express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose
- 
+
 express :-backend environment
 body-parser :- to parse body requests
 bcrypt :- for password encryption
@@ -257,4 +257,30 @@ we exit the application.
 
 further in the file, we have defined
 Persist state with Redux Persist using Redux Toolkit 
+
+---------------------------------------------------------------------------------------------
+
+COLOR, THEME, DARK MODE AND STYLING SETUP
+---------------------------------------------
+
+Setting up custom MUI theme in the theme.js
+file, with required color palletes and font styles
+for the light and dark mode.
+
+Now we will integrate these styles into our 
+main file i.e. App.js.
+
+import { useMemo } from 'react';
+import { useSelector } from 'react-redux';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material';
+import { themeSettings } from './theme';
+
+
+adding a ThemeProvider to the routes and in 
+the end adding CssBaseline which is basically 
+a reset kind of thing for the MUI CSS.
+
+
+
 

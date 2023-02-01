@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import authReducer from "./state"
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore,combineReducers, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import {
   persistStore,
@@ -21,7 +21,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 
 const persistConfig = {key : "root" , storage , version: 1};
-const persistedReducer = persistReducer(persistConfig, persistReducer);
+const persistedReducer = persistReducer(persistConfig, authReducer);
 const store = configureStore({
   reducer : persistedReducer,
   middleware : (getDefaultMiddleware)=>
