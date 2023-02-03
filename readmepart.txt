@@ -284,6 +284,8 @@ a reset kind of thing for the MUI CSS.
 
 -------------------------------------------------------
 
+NAVBAR 
+-------------------------------
 We will now set up our Navbar
 
 We have defined a FlexBetween.js file in the components
@@ -301,4 +303,30 @@ the LEFT component and the RIGHT component.
 
 Navbar part is done (throwing error at the moment)
 Cannot read firstName of user.
+
+--------------------------------------------------------------------------------------
+
+REGISTER, LOGIN PAGES AND FORM 
+-------------------------------------
+
+Will define the index.jsx file inside the login page component
+
+And then create a new Form.jsx file where we 
+will define the form element where we will 
+do all the register functionalities.
+
+Inside the Form.jsx file we will import all the required
+packages for Registration
+
+We will create the schema i.e. the yup validation schema
+
+This will determine the shape of how the form 
+library is going to be saving this information 
+
+After creating all the form components we will now 
+define the logic after pressing the login or register
+button. 
+
+------------------------------------------------------------------
+
 
